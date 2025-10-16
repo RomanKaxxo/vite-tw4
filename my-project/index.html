@@ -1,0 +1,149 @@
+<!doctype html> npm run dev
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="/src/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentioo-Homepage</title>
+</head>
+
+<body class="font-[Poppins]">
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#">
+          <img src="img/Logo.png" alt="Logo" class="w-32" />
+        </a>
+      </div>
+
+      <!-- Searchbar -->
+      <div class="searchbar-container">
+        <form class="search-form" role="search">
+          <div class="search-wrapper">
+            <span class="search-icon">
+              <i class="fas fa-search translate-y-px"></i>
+            </span>
+            <input type="search" name="q" aria-label="Hledat" placeholder="Hledat" class="search-input" />
+          </div>
+        </form>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <div class="hamburger">
+        <button id="navbar-toggle" class="hamburger-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="#" class="mobile-link">Nabídka kurzů</a>
+        <a href="#" class="mobile-link">Lektoři</a>
+        <a href="#" class="mobile-link">Blog</a>
+        <a href="#" class="mobile-btn">Zaregistrovat se</a>
+      </div>
+
+      <!-- Desktop menu -->
+      <div id="navbar-menu" class="navbar-menu">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              Nabídka kurzů
+              <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+            </a>
+            <div class="dropdown">
+              <div class="py-2">
+                <a href="#" class="dropdown-link">Programování</a>
+                <a href="#" class="dropdown-link">Design</a>
+                <a href="#" class="dropdown-link">Marketing</a>
+                <a href="#" class="dropdown-link">Business</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#" class="hover:text-[#2563eb]">Lektoři</a></li>
+          <li><a href="#" class="hover:text-[#2563eb]">Blog</a></li>
+        </ul>
+
+        <!-- Tlačítka -->
+        <div class="flex items-center gap-3">
+          <a href="#" class="btn-outline">Přihlásit se</a>
+          <a href="#" class="btn-primary">Zaregistrovat se</a>
+        </div>
+
+        <!-- Ikony -->
+        <div class="flex items-center gap-3">
+          <a href="#" class="icon-btn">
+            <img src="img/Kosik.png" alt="Cart" class="w-6 h-6" />
+          </a>
+          <a href="#" class="icon-btn-alt">
+            <img src="img/network.png" alt="Globe" class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-wrapper">
+      <!-- Gradient box -->
+      <div class="hero-gradient">
+        <div class="hero-content">
+          <div class="hero-texts">
+            <h1 class="hero-title">
+              Vzdělávání pro <span class="hero-highlight">každého</span>
+            </h1>
+            <p class="hero-paragraph">
+              Mentioo – místo, kde můžete růst svým tempem.<br />
+              Učte se tak, jak vám vyhovuje.
+            </p>
+            <div class="hero-buttons">
+              <a href="#" class="hero-btn-primary">Najít kurz</a>
+              <a href="#" class="hero-btn-outline">Stát se lektorem</a>
+            </div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-box">
+              <span class="stat-number">+1000</span>
+              <p class="stat-label">Aktivních studentů</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!--  Bubliny -->
+        <div class="bubble-field">
+          <div class="bubble" style="top:80%; left:85%; width:21px; height:21px;"></div>
+          <div class="bubble" style="top:20%; left:70%; width:11px; height:11px;"></div>
+          <div class="bubble" style="top:60%; left:55%; width:8px; height:8px;"></div>
+          <div class="bubble" style="top:65%; left:35%; width:14px; height:14px;"></div>
+          <div class="bubble" style="top:40%; left:1%; width:10px; height:10px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero image -->
+    <div class="hero-image">
+      <img src="img/heroGirl.png" alt="Hero girl" />
+    </div>
+    <div class="hero-ellipse"></div>
+
+  </section>
+
+
+
+
+
+  <script src="js/bubbles.js"></script>
+  <script src="js/hamburger.js"></script>
+</body>
+
+</html>
