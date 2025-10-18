@@ -48,7 +48,7 @@
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
-  },
+  }, // ← tady chyběla čárka!
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -63,3 +63,49 @@
   },
 });
 
+
+
+
+// Category Swiper
+const categorySwiper = new Swiper(".myCategorySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 25,
+  loop: false,
+  speed: 800,
+  navigation: {
+    nextEl: ".category-next",
+    prevEl: ".category-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 25,
+    },
+  },
+});
+
+// Přepínání kategorií
+document.querySelectorAll('.category-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    // Odstranit active ze všech
+    document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+    // Přidat active na kliknutý
+    this.classList.add('active');
+    
+    // Zde můžete přidat logiku pro filtrování karet podle kategorie
+    const category = this.getAttribute('data-category');
+    console.log('Selected category:', category);
+  });
+});

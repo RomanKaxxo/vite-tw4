@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 /* ===== HEADER ===== */
 .header {
   @apply bg-white shadow fixed top-0 left-0 right-0 z-50;
@@ -56,7 +55,7 @@
 }
 
 .mobile-menu.active {
-  max-height: 300px; /* nebo víc, pokud máš delší menu */
+  max-height: 300px;
   opacity: 1;
 }
 
@@ -113,24 +112,20 @@
   @apply w-11 h-11 flex items-center justify-center rounded-full bg-[#dbeafe] hover:bg-[#bfdbfe] transition;
 }
 
-
 /* ===== HERO SEKCE ===== */
 .hero-section {
-  @apply relative flex justify-center py-36 px-4 sm:px-6 md:px-10 lg:px-20 
-         overflow-x-hidden overflow-y-visible;
+  @apply relative flex justify-center pt-36 pb-[6rem] px-4 sm:px-6 md:px-10 lg:px-20 overflow-x-hidden overflow-y-visible;
 }
 
-/* Wrapper drží celý layout */
 .hero-wrapper {
-  @apply relative flex items-center justify-center w-full max-w-[1750px];
+  @apply relative flex items-center justify-center w-full max-w-[1750px] z-10;
 }
 
-/* Gradient box – bubliny uvnitř */
+/* Gradient box */
 .hero-gradient {
-  @apply relative w-full h-[608px] rounded-[64px] bg-[#E5F8FF] overflow-hidden z-5; 
+  @apply relative w-full h-[608px] rounded-[64px] bg-[#E5F8FF] overflow-hidden z-5;
 }
 
-/* Bubliny – zůstávají v gradientu */
 .bubble-field {
   @apply absolute inset-0 pointer-events-none z-6;
 }
@@ -141,14 +136,13 @@
 
 /* Obsah */
 .hero-content {
-  @apply absolute inset-0 flex flex-col xl:flex-row items-stretch justify-between 
-         gap-10 sm:gap-12 p-6 sm:p-8 xl:p-32 z-20 ;
+  @apply absolute inset-0 flex flex-col xl:flex-row items-stretch justify-between gap-10 sm:gap-12 p-6 sm:p-8 xl:p-32 z-20;
 }
 
+/* === TEXTY === */
 .hero-texts {
-  @apply flex flex-col justify-center text-left w-full xl:w-1/2 z-10 gap-y-[40px];
+  @apply flex flex-col justify-center text-left w-full xl:w-1/2 z-10 gap-y-[25px] md:text-left items-center md:items-start;
 }
-
 
 .hero-title {
   @apply text-[56px] font-semibold leading-[1.2] tracking-wide mb-4;
@@ -162,47 +156,67 @@
   @apply text-[#141414] max-w-xl mx-auto xl:mx-0 mb-7 text-[20px] leading-relaxed;
 }
 
-/* Tlačítka */
+/* === HERO BUTTONS === */
 .hero-buttons {
   @apply flex flex-col sm:flex-row flex-wrap justify-center xl:justify-start gap-4;
 }
 
+/* === MOBILE ÚPRAVA === */
+@media (max-width: 767px) {
+  .hero-buttons {
+    @apply flex flex-col items-start justify-start gap-3 pl-4;
+  }
+
+  .hero-stats,
+  .hero-stats--secondary {
+    @apply relative justify-center mt-8;
+  }
+
+  .stat-box {
+    @apply mx-auto shadow-2xl w-[200px] h-[100px] flex flex-col items-center text-center;
+  }
+
+  .stat-number {
+    @apply text-[22px] font-semibold text-[#003F91];
+  }
+
+  .stat-label {
+    @apply text-[11px] text-gray-600 mt-1;
+  }
+
+  /* Druhý box skryj na mobilech */
+  .hero-stats--secondary {
+    @apply hidden;
+  }
+}
+
 .hero-btn-primary {
-  @apply bg-[#D4EDFF] text-[#0069B2] px-6 py-3 rounded-full font-semibold 
-         hover:bg-[#0068b23a] transition;
+  @apply bg-[#D4EDFF] text-[#0069B2] px-6 py-3 rounded-full font-semibold hover:bg-[#0068b23a] transition;
 }
 
 .hero-btn-outline {
-  @apply border border-blue-600 text-blue-600 px-6 py-3 rounded-full font-semibold 
-         hover:bg-blue-600 hover:text-white transition;
+  @apply border border-blue-600 text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition;
 }
 
-/* Hero girl */
+/* === HERO IMAGE === */
 .hero-image {
-  @apply hidden xl:block absolute top-[101px] left-[962px]
-         w-[697px] h-[697px] z-[30] pointer-events-none;
+  @apply hidden xl:block absolute top-[101px] left-[962px] w-[697px] h-[697px] z-30 pointer-events-none;
 }
-
-
 
 .hero-image img {
-  @apply w-[697px] h-[697px] object-contain;
+  @apply w-[697px] h-[697px] pointer-events-none;
 }
 
+/* === STAT BOXY === */
 .hero-stats {
-  @apply absolute right-[180px] top-[180-px] xl:top-[120px] xl:right-[220px];
+  @apply md:absolute md:top-[120px] md:right-[220px] z-50;
 }
 
 .stat-box {
-  @apply absolute top-[-20px] -right-[100px] 
-         bg-white rounded-[16px] shadow-lg
+  @apply bg-white rounded-[16px] shadow-lg
          w-[215px] h-[127px]
-         flex flex-col  items-start
-         px-[24px] py-[24px] gap-[4px]
-         z-50;
+         flex flex-col items-start justify-center px-[24px] py-[24px] gap-[4px];
 }
-
-
 
 .stat-number {
   @apply text-[32px] font-semibold text-[#003F91];
@@ -212,95 +226,269 @@
   @apply text-[18px] text-gray-600 mt-1;
 }
 
+/* Druhý box */
+.hero-stats--secondary {
+  @apply hidden md:flex md:absolute md:top-[540px] md:left-[880px] z-40;
+}
+
+.hero-stats--secondary .stat-box {
+  @apply bg-white rounded-[16px] shadow-lg
+         w-[158px] h-[127px]
+         flex flex-col items-start justify-center px-[24px] py-[24px] gap-[4px];
+}
+
+/* === HERO KRUHY === */
 .hero-circle {
-  @apply absolute rounded-full z-10 bg-gradient-to-r from-[#00E8E8] to-[#28A6FF] opacity-5;
+  @apply absolute rounded-full z-0 bg-gradient-to-r from-[#00E8E8] to-[#28A6FF] opacity-5;
   width: 591px;
   height: 591px;
   top: 45px;
   left: 950px;
 }
 
-/* Menší kruh */
 .hero-circle--small {
-  @apply absolute rounded-full  z-10 bg-gradient-to-r from-[#00E8E8] to-[#28A6FF] opacity-10;
+  @apply absolute rounded-full z-0 bg-gradient-to-r from-[#00E8E8] to-[#28A6FF] opacity-10;
   width: 486px;
   height: 486px;
   top: 150px;
   left: 1000px;
-
-  ;
 }
 
 /* ===== NEWS SECTION ===== */
 .news-section {
-  @apply relative w-full flex justify-center py-20 px-4 sm:px-6 lg:px-12 overflow-hidden;
+  @apply relative w-full flex justify-center px-4 sm:px-6 lg:px-12 overflow-hidden;
 }
 
 .news-wrapper {
-  @apply relative w-full max-w-[1750px] flex flex-col items-center gap-10;
+  @apply w-full max-w-[1750px] flex flex-col items-center;
 }
 
 .news-header {
-  @apply text-center mb-8;
+  @apply text-left mb-8 w-full max-w-[1520px];
 }
 
 .news-title {
-  @apply text-3xl sm:text-4xl font-bold;
+  @apply text-[28px] sm:text-[36px] md:text-[40px] font-semibold leading-tight text-center md:text-left;
 }
 
 .news-subtitle {
-  @apply text-gray-500 mt-3 max-w-2xl mx-auto text-[18px];
+  @apply text-[#4D4D4D] mt-2 max-w-[600px] text-[16px] leading-relaxed text-center md:text-left mx-auto md:mx-0 whitespace-nowrap;
 }
 
 /* ===== GRID ===== */
 .news-grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 w-full;
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[25px] justify-center;
 }
 
 /* ===== KARTA ===== */
 .news-card {
-  @apply bg-white rounded-[32px] shadow-md overflow-hidden 
-         hover:shadow-lg transition duration-300 flex flex-col;
+  @apply bg-white rounded-[16px] shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex flex-col w-[361px] h-[451px];
 }
 
 .news-img {
- @apply w-full h-[220px] object-cover rounded-t-[32px];
+  @apply w-full h-[230px] object-cover rounded-t-[16px];
+}
+
+.news-card-body {
+  @apply flex flex-col p-6 flex-grow;
 }
 
 .news-card-title {
-  @apply font-semibold text-lg mb-1;
+  @apply font-semibold text-lg mb-1 text-gray-900;
 }
 
 .news-card-text {
-  @apply text-gray-800 text-sm mb-3 flex-grow;
+  @apply text-gray-600 text-sm mb-3;
+}
+
+.news-card-rating {
+  @apply flex items-center text-sm mb-4;
+}
+
+.rating-value {
+  @apply font-semibold mr-1;
+}
+
+.rating-stars {
+  @apply flex text-yellow-400 mr-1;
+}
+
+.rating-count {
+  @apply text-gray-500;
 }
 
 .news-tags {
   @apply flex items-center gap-2 mt-auto;
 }
 
-/* ===== TAGY ===== */
 .tag {
-  @apply text-xs px-2 py-1 rounded-full font-medium;
+  @apply text-[13px] px-[10px] py-[4px] rounded-[4px] font-medium gap-[10px];
 }
 
 .tag-green {
-  @apply bg-green-100 text-green-600;
+  @apply bg-[#E6FFFC] text-[#005D5D];
 }
 
 .tag-blue {
-  @apply bg-blue-100 text-blue-600;
+  @apply bg-[#E9F6FF] text-[#0069B2];
 }
 
 .tag-purple {
-  @apply bg-purple-100 text-purple-600;
+  @apply bg-[#F1E9FF] text-[#7045C2] font-[500];
 }
 
 /* ===== BUTTON ===== */
 .news-button-wrapper {
-  @apply flex justify-center mt-6;
+  @apply flex justify-center md:justify-end w-full max-w-[1520px] my-6;
 }
 
-.news-btn {
-  @apply border border-blue-500 text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-blue-600 hover:text-white transition;
+.swiper-button-prev,
+.swiper-button-next {
+  @apply absolute top-1/2 -translate-y-1/2 
+         rounded-full bg-white border border-[#E5F8FF] 
+         flex items-center justify-center shadow-sm
+         hover:bg-[#f8fcff] hover:shadow-md hover:scale-105
+         transition-all duration-300 z-50;
+  width: 48px !important;
+  height: 48px !important;
+  --swiper-navigation-size: 24px;
+}
+
+/* levá šipka */
+.swiper-button-prev {
+  left: 125px !important;
+}
+
+/* Pravá šipka */
+.swiper-button-next {
+  right: 125px !important;
+}
+
+
+/* ===== CATEGORY SECTION ===== */
+.category-section {
+  @apply relative flex justify-center pt-16 pb-1 overflow-hidden;
+}
+
+.category-wrapper {
+  @apply relative w-full max-w-[2000px] z-10;
+}
+
+/* Gradient box pro category */
+.category-gradient {
+  @apply relative w-full min-h-[700px] bg-[#E5F8FF] overflow-hidden p-8 sm:p-12 lg:p-20;
+}
+
+.category-content {
+  @apply relative z-20 flex flex-col items-center;
+}
+
+.category-header {
+  @apply text-left mb-6 w-full max-w-[1520px];
+}
+
+.category-title {
+  @apply text-[28px] sm:text-[36px] md:text-[40px] font-semibold leading-tight text-center md:text-left;
+}
+
+.category-subtitle {
+  @apply text-[#4D4D4D] mt-2 max-w-[600px] text-[16px] leading-relaxed text-center md:text-left mx-auto md:mx-0;
+}
+
+/* ===== KATEGORIE TAGY ===== */
+.category-tabs {
+  @apply flex gap-6 overflow-x-auto pb-4 mb-8 w-full max-w-[1520px];
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.category-tab {
+  @apply text-[#4D4D4D] text-[16px] font-medium whitespace-nowrap pb-2 border-b-2 border-transparent
+         hover:text-[#0069B2] transition-all relative cursor-pointer;
+}
+
+.category-tab.active {
+  @apply text-[#0069B2] border-b-2 border-[#0069B2];
+}
+
+.swiper-wrapper {
+  @apply gap-[20px];
+}
+
+
+/* ===== CATEGORY GRID/SWIPER ===== */
+.category-grid {
+  @apply flex gap-[25px] w-full max-w-[1520px];
+}
+
+/* ===== CATEGORY KARTA ===== */
+.category-card {
+  @apply bg-white rounded-[16px] shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex flex-col w-[361px] h-[451px] flex-shrink-0;
+}
+
+.category-img {
+  @apply w-full h-[230px] object-cover rounded-t-[16px];
+}
+
+.category-card-body {
+  @apply flex flex-col p-6 flex-grow;
+}
+
+.category-card-title {
+  @apply font-semibold text-lg mb-1 text-gray-900;
+}
+
+.category-card-text {
+  @apply text-gray-600 text-sm mb-3;
+}
+
+.category-card-rating {
+  @apply flex items-center text-sm mb-4;
+}
+
+.category-tags {
+  @apply flex items-center gap-2 mt-auto;
+}
+
+.tag-turquoise {
+  @apply bg-[#E6FFFC] text-[#005D5D];
+}
+
+/* ===== CATEGORY BUTTON ===== */
+.category-button-wrapper {
+  @apply flex justify-center md:justify-end w-full max-w-[1520px] my-6;
+}
+
+.category-btn-outline {
+  @apply border border-[#0069B2] text-[#0069B2] px-6 py-3 rounded-full font-semibold 
+         hover:bg-[#0069B2] hover:text-white transition;
+}
+
+/* ===== CATEGORY NAVIGATION ===== */
+.category-prev,
+.category-next {
+  @apply absolute top-1/2 -translate-y-1/2 
+         rounded-full bg-white border border-[#E5F8FF] 
+         flex items-center justify-center shadow-sm
+         hover:bg-[#f8fcff] hover:shadow-md hover:scale-105
+         transition-all duration-300 z-50;
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.category-prev {
+  left: 125px !important;
+}
+
+.category-next {
+  right: 125px !important;
+}
+
+.category-prev::after,
+.category-next::after {
+  display: none !important;
 }

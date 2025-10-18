@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="/src/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mentioo-Homepage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="/src/style.css">
+  
+  <title>Mentioo - Homepage</title>
 </head>
 
 <body class="font-[Poppins]">
+  <!-- HEADER -->
   <header class="header">
     <nav class="navbar">
       <!-- Logo -->
@@ -44,7 +44,7 @@
       </div>
 
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="mobile-menu hidden-menu">
+      <div id="mobile-menu" class="mobile-menu">
         <a href="#" class="mobile-link">Nabídka kurzů</a>
         <a href="#" class="mobile-link">Lektoři</a>
         <a href="#" class="mobile-link">Blog</a>
@@ -54,7 +54,7 @@
       <!-- Desktop menu -->
       <div id="navbar-menu" class="navbar-menu">
         <ul class="nav-links">
-          <li class="nav-item">
+          <li class="nav-item group">
             <a href="#" class="nav-link">
               Nabídka kurzů
               <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
@@ -91,13 +91,20 @@
     </nav>
   </header>
 
+
+
+  <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="hero-wrapper">
       <!-- Gradient box -->
-      <div class="hero-circle"></div>
-      <div class="hero-circle hero-circle--small"></div>
       <div class="hero-gradient">
+        <!-- Kruhy na pozadí -->
+        <div class="hero-circle"></div>
+        <div class="hero-circle hero-circle--small"></div>
+
+        <!-- Obsah -->
         <div class="hero-content">
+          <!-- Texty -->
           <div class="hero-texts">
             <h1 class="hero-title">
               Vzdělávání pro <span class="hero-highlight">každého</span>
@@ -112,16 +119,16 @@
             </div>
           </div>
 
+          <!-- Statistika -->
           <div class="hero-stats">
             <div class="stat-box">
               <span class="stat-number">+1000</span>
               <p class="stat-label">Aktivních studentů</p>
             </div>
           </div>
-
         </div>
 
-        <!--  Bubliny -->
+        <!-- Bubliny -->
         <div class="bubble-field">
           <div class="bubble" style="top:80%; left:85%; width:21px; height:21px;"></div>
           <div class="bubble" style="top:20%; left:70%; width:11px; height:11px;"></div>
@@ -132,76 +139,291 @@
       </div>
     </div>
 
-    
-
     <!-- Hero image -->
     <div class="hero-image">
       <img src="img/heroGirl.png" alt="Hero girl" />
     </div>
-
   </section>
 
+  <!-- NEWS SECTION -->
   <section class="news-section">
-  <div class="news-wrapper">
+      <div class="news-wrapper mySwiper">
+    <div class="swiper-button-prev">
+  <i class="fas fa-chevron-left text-[#0069B2] text-xl"></i>
+</div>
+<div class="swiper-button-next">
+  <i class="fas fa-chevron-right text-[#0069B2] text-xl"></i>
+</div>
+    
     <!-- Nadpis -->
-    <div class="news-header">
-      <h2 class="news-title">Horké novinky na <span class="hero-highlight">Mentioo</span></h2>
-      <p class="news-subtitle">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-      </p>
+    <div class="news-header"> 
+        <h2 class="news-title">
+          Horké novinky na <span class="text-[#28A6FF]">Mentioo</span>
+        </h2>
+        <p class="news-subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
+          odio mattis.
+        </p>
+      </div>
+
+      <!-- Karty -->
+      <div class="news-grid">
+        <!-- Karta 1 -->
+        <div class="news-card">
+          <img src="img/card1.png" alt="Data Science Fundamentals" class="news-img" />
+          <div class="news-card-body">
+            <h3 class="news-card-title">Data Science Fundamentals</h3>
+            <p class="news-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
+            <div class="news-card-rating">
+              <span class="rating-value">4,8</span>
+              <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(5)</span>
+            </div>
+            <div class="news-tags">
+              <span class="tag tag-green">Novinka</span>
+              <span class="tag tag-purple">Free trial</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Karta 2 -->
+        <div class="news-card">
+          <img src="img/card2.png" alt="Data Science Fundamentals" class="news-img" />
+          <div class="news-card-body">
+            <h3 class="news-card-title">Data Science Fundamentals</h3>
+            <p class="news-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
+            <div class="news-card-rating">
+              <span class="rating-value">4,8</span>
+              <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(5)</span>
+            </div>
+            <div class="news-tags">
+              <span class="tag tag-green">Novinka</span>
+              <span class="tag tag-blue">Pro nováčky</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Karta 3 -->
+        <div class="news-card">
+          <img src="img/card3.png" alt="Data Science Fundamentals" class="news-img" />
+          <div class="news-card-body">
+            <h3 class="news-card-title">Data Science Fundamentals</h3>
+            <p class="news-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
+            <div class="news-card-rating">
+              <span class="rating-value">4,8</span>
+              <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(5)</span>
+            </div>
+            <div class="news-tags">
+              <span class="tag tag-green">Novinka</span>
+              <span class="tag tag-purple">Free trial</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Karta 4 -->
+        <div class="news-card">
+          <img src="img/card4.png" alt="Data Science Fundamentals" class="news-img" />
+          <div class="news-card-body">
+            <h3 class="news-card-title">Data Science Fundamentals</h3>
+            <p class="news-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
+            <div class="news-card-rating">
+              <span class="rating-value">4,8</span>
+              <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="rating-count">(5)</span>
+            </div>
+            <div class="news-tags">
+              <span class="tag tag-green">Novinka</span>
+              <span class="tag tag-purple">Free trial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tlačítko -->
+      <div class="news-button-wrapper">
+        <button class="hero-btn-outline">Další novinky</button>
+      </div>
     </div>
+  </section>
 
-    <!-- Karty -->
-    <div class="news-grid">
-      <!-- 1️ KARTA -->
-      <div class="news-card">
-        <img src="https://placehold.co/400x220/2e68ff/ffffff?text=Web+Development" alt="Web Development Bootcamp" class="news-img" />
-        <h3 class="news-card-title">Web Development Bootcamp</h3>
-        <p class="news-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
-        <div class="news-tags">
-          <span class="tag tag-green">Novinka</span>
-          <span class="tag tag-purple">Free trial</span>
+ <!-- CATEGORY SECTION -->
+<section class="category-section">
+  <div class="category-wrapper">
+    <!-- GRADIENT BOX -->
+      <!-- Nadpis -->
+        <div class="category-header">
+          <h2 class="category-title">Vyberte si kurz podle kategorie</h2>
+          <p class="category-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+          </p>
         </div>
+    <div class="category-gradient">
+      
+      <!-- Navigační šipky -->
+      <div class="category-prev">
+        <i class="fas fa-chevron-left text-[#0069B2] text-xl"></i>
+      </div>
+      <div class="category-next">
+        <i class="fas fa-chevron-right text-[#0069B2] text-xl"></i>
       </div>
 
-      <!-- 2️ KARTA -->
-      <div class="news-card">
-        <img src="https://placehold.co/400x220/8b5cf6/ffffff?text=UI%2FUX+Design" alt="UI/UX Design Masterclass" class="news-img" />
-        <h3 class="news-card-title">UI/UX Design Masterclass</h3>
-        <p class="news-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
-        <div class="news-tags">
-          <span class="tag tag-green">Novinka</span>
-          <span class="tag tag-blue">Pro nováčky</span>
+      <!-- Obsah uvnitř gradientu -->
+      <div class="category-content">
+        
+       
+
+        <!-- Kategorie tagy -->
+        <div class="category-tabs">
+          <button class="category-tab active" data-category="web">Web development</button>
+          <button class="category-tab" data-category="data">Data science</button>
+          <button class="category-tab" data-category="comm">Communication</button>
+          <button class="category-tab" data-category="lead">Leadership</button>
+          <button class="category-tab" data-category="graphic">Graphic design</button>
+          <button class="category-tab" data-category="business">Business analytics</button>
+          <button class="category-tab" data-category="marketing">Marketing</button>
+          <button class="category-tab" data-category="lifestyle">Lifestyle</button>
+          <button class="category-tab" data-category="music">Music</button>
         </div>
-      </div>
 
-      <!-- 3️ KARTA -->
-      <div class="news-card">
-        <img src="https://placehold.co/400x220/94a3b8/ffffff?text=Illustration" alt="Modern Illustration Course" class="news-img" />
-        <h3 class="news-card-title">Modern Illustration Course</h3>
-        <p class="news-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
-        <div class="news-tags">
-          <span class="tag tag-green">Novinka</span>
+        <!-- SWIPER -->
+        <div class="myCategorySwiper">
+          <div class="swiper-wrapper">
+            <!-- Karta 1 -->
+            <div class="swiper-slide category-card">
+              <img src="img/card1.png" alt="Web Development Bootcamp" class="category-img" />
+              <div class="category-card-body">
+                <h3 class="category-card-title">Web Development Bootcamp</h3>
+                <p class="category-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
+                <div class="category-card-rating">
+                  <span class="rating-value">4,8</span>
+                  <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="rating-count">(5)</span>
+                </div>
+                <div class="category-tags">
+                  <span class="tag tag-green">Novinka</span>
+                  <span class="tag tag-purple">Free trial</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Karta 2 -->
+            <div class="swiper-slide category-card">
+              <img src="img/card2.png" alt="UI/UX Design Masterclass" class="category-img" />
+              <div class="category-card-body">
+                <h3 class="category-card-title">UI/UX Design Masterclass</h3>
+                <p class="category-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
+                <div class="category-card-rating">
+                  <span class="rating-value">4,6</span>
+                  <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <span class="rating-count">(4)</span>
+                </div>
+                <div class="category-tags">
+                  <span class="tag tag-green">Novinka</span>
+                  <span class="tag tag-blue">Pro nováčky</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Karta 3 -->
+            <div class="swiper-slide category-card">
+              <img src="img/card3.png" alt="Modern Illustration Course" class="category-img" />
+              <div class="category-card-body">
+                <h3 class="category-card-title">Modern Illustration Course</h3>
+                <p class="category-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
+                <div class="category-card-rating">
+                  <span class="rating-value">4,8</span>
+                  <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="rating-count">(5)</span>
+                </div>
+                <div class="category-tags">
+                  <span class="tag tag-turquoise">Nejlepší hodnocení</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Karta 4 -->
+            <div class="swiper-slide category-card">
+              <img src="img/card4.png" alt="Data Science Fundamentals" class="category-img" />
+              <div class="category-card-body">
+                <h3 class="category-card-title">Data Science Fundamentals</h3>
+                <p class="category-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
+                <div class="category-card-rating">
+                  <span class="rating-value">4,8</span>
+                  <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="rating-count">(4)</span>
+                </div>
+                <div class="category-tags">
+                  <span class="tag tag-green">Novinka</span>
+                  <span class="tag tag-purple">Free trial</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <!-- 3️ KARTA -->
-      <div class="news-card">
-        <img src="https://placehold.co/400x220/94a3b8/ffffff?text=Illustration" alt="Modern Illustration Course" class="news-img" />
-        <h3 class="news-card-title">Modern Illustration Course</h3>
-        <p class="news-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
-        <div class="news-tags">
-          <span class="tag tag-green">Novinka</span>
+        <!-- Tlačítko -->
+        <div class="category-button-wrapper">
+          <button class="category-btn-outline">Další kurzy</button>
         </div>
+
       </div>
+    </div>
+  </div>
+</section>
 
-
-
-
-
-  <script src="js/bubbles.js"></script>
   <script src="js/hamburger.js"></script>
+  <script src="js/bubbles.js"></script>
+  <script src="js/swipers.js"></script>
 </body>
 
 </html>
