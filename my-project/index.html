@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="/src/style.css">
-  
+
   <title>Mentioo - Homepage</title>
 </head>
 
@@ -147,16 +147,16 @@
 
   <!-- NEWS SECTION -->
   <section class="news-section">
-      <div class="news-wrapper mySwiper">
-    <div class="swiper-button-prev">
-  <i class="fas fa-chevron-left text-[#0069B2] text-xl"></i>
-</div>
-<div class="swiper-button-next">
-  <i class="fas fa-chevron-right text-[#0069B2] text-xl"></i>
-</div>
-    
-    <!-- Nadpis -->
-    <div class="news-header"> 
+    <div class="news-wrapper mySwiper">
+      <div class="swiper-button-prev">
+        <i class="fas fa-chevron-left text-[#0069B2] text-xl"></i>
+      </div>
+      <div class="swiper-button-next">
+        <i class="fas fa-chevron-right text-[#0069B2] text-xl"></i>
+      </div>
+
+      <!-- Nadpis -->
+      <div class="news-header">
         <h2 class="news-title">
           Horké novinky na <span class="text-[#28A6FF]">Mentioo</span>
         </h2>
@@ -272,34 +272,21 @@
     </div>
   </section>
 
- <!-- CATEGORY SECTION -->
-<section class="category-section">
-  <div class="category-wrapper">
-    <!-- GRADIENT BOX -->
-      <!-- Nadpis -->
-        <div class="category-header">
-          <h2 class="category-title">Vyberte si kurz podle kategorie</h2>
-          <p class="category-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-          </p>
-        </div>
-    <div class="category-gradient">
-      
-      <!-- Navigační šipky -->
-      <div class="category-prev">
-        <i class="fas fa-chevron-left text-[#0069B2] text-xl"></i>
-      </div>
-      <div class="category-next">
-        <i class="fas fa-chevron-right text-[#0069B2] text-xl"></i>
+  <section class="category-section">
+    <div class="category-wrapper">
+
+      <!-- NADPIS A PODNADPIS -->
+      <div class="category-header text-center">
+        <h2 class="category-title">Vyberte si kurz podle kategorie</h2>
+        <p class="category-subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
+          odio mattis.
+        </p>
       </div>
 
-      <!-- Obsah uvnitř gradientu -->
-      <div class="category-content">
-        
-       
-
-        <!-- Kategorie tagy -->
-        <div class="category-tabs">
+      <!-- KATEGORIE TAGY NAD GRADIENTEM -->
+      <div class="category-tabs-wrapper text-center">
+        <div class="category-tabs inline-flex flex-wrap justify-center gap-3">
           <button class="category-tab active" data-category="web">Web development</button>
           <button class="category-tab" data-category="data">Data science</button>
           <button class="category-tab" data-category="comm">Communication</button>
@@ -309,121 +296,268 @@
           <button class="category-tab" data-category="marketing">Marketing</button>
           <button class="category-tab" data-category="lifestyle">Lifestyle</button>
           <button class="category-tab" data-category="music">Music</button>
+          <span class="slider-bar"></span>
+        </div>
+      </div>
+
+      <!-- ===== CATEGORY GRADIENT SECTION ===== -->
+      <div class="category-gradient relative">
+
+        <!-- Navigační šipky -->
+        <div class="category-prev">
+          <i class="fas fa-chevron-left text-[#0069B2] text-xl"></i>
+        </div>
+        <div class="category-next">
+          <i class="fas fa-chevron-right text-[#0069B2] text-xl"></i>
         </div>
 
-        <!-- SWIPER -->
-        <div class="myCategorySwiper">
-          <div class="swiper-wrapper">
-            <!-- Karta 1 -->
-            <div class="swiper-slide category-card">
-              <img src="img/card1.png" alt="Web Development Bootcamp" class="category-img" />
-              <div class="category-card-body">
-                <h3 class="category-card-title">Web Development Bootcamp</h3>
-                <p class="category-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
-                <div class="category-card-rating">
-                  <span class="rating-value">4,8</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <span class="rating-count">(5)</span>
-                </div>
-                <div class="category-tags">
-                  <span class="tag tag-green">Novinka</span>
-                  <span class="tag tag-purple">Free trial</span>
-                </div>
-              </div>
-            </div>
+        <!-- Obsah uvnitř gradientu -->
+        <div class="category-content">
+          <!-- SWIPER -->
+          <div class="swiper myCategorySwiper">
+            <div class="swiper-wrapper">
 
-            <!-- Karta 2 -->
-            <div class="swiper-slide category-card">
-              <img src="img/card2.png" alt="UI/UX Design Masterclass" class="category-img" />
-              <div class="category-card-body">
-                <h3 class="category-card-title">UI/UX Design Masterclass</h3>
-                <p class="category-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
-                <div class="category-card-rating">
-                  <span class="rating-value">4,6</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
+              <!-- Karta 1 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card1.png" alt="Web Development Bootcamp" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Web Development Bootcamp</h3>
+                  <p class="category-card-text">Learn to build modern websites from scratch with Erika Simpson...</p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,8</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="rating-count">(5)</span>
                   </div>
-                  <span class="rating-count">(4)</span>
-                </div>
-                <div class="category-tags">
-                  <span class="tag tag-green">Novinka</span>
-                  <span class="tag tag-blue">Pro nováčky</span>
+                  <div class="category-tags">
+                    <span class="tag tag-green">Novinka</span>
+                    <span class="tag tag-purple">Free trial</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Karta 3 -->
-            <div class="swiper-slide category-card">
-              <img src="img/card3.png" alt="Modern Illustration Course" class="category-img" />
-              <div class="category-card-body">
-                <h3 class="category-card-title">Modern Illustration Course</h3>
-                <p class="category-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
-                <div class="category-card-rating">
-                  <span class="rating-value">4,8</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+              <!-- Karta 2 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card2.png" alt="UI/UX Design Masterclass" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">UI/UX Design Masterclass</h3>
+                  <p class="category-card-text">Master modern UI/UX principles with practical design exercises...</p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,6</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="rating-count">(4)</span>
                   </div>
-                  <span class="rating-count">(5)</span>
-                </div>
-                <div class="category-tags">
-                  <span class="tag tag-turquoise">Nejlepší hodnocení</span>
+                  <div class="category-tags">
+                    <span class="tag tag-green">Novinka</span>
+                    <span class="tag tag-blue">Pro nováčky</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Karta 4 -->
-            <div class="swiper-slide category-card">
-              <img src="img/card4.png" alt="Data Science Fundamentals" class="category-img" />
-              <div class="category-card-body">
-                <h3 class="category-card-title">Data Science Fundamentals</h3>
-                <p class="category-card-text">Learn to build modern website from scratch with Erika Simpson, a web...</p>
-                <div class="category-card-rating">
-                  <span class="rating-value">4,8</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+              <!-- Karta 3 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card3.png" alt="Modern Illustration Course" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Modern Illustration Course</h3>
+                  <p class="category-card-text">Create vibrant digital illustrations and improve your creative
+                    workflow...</p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,8</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="rating-count">(5)</span>
                   </div>
-                  <span class="rating-count">(4)</span>
-                </div>
-                <div class="category-tags">
-                  <span class="tag tag-green">Novinka</span>
-                  <span class="tag tag-purple">Free trial</span>
+                  <div class="category-tags">
+                    <span class="tag tag-turquoise">Nejlepší hodnocení</span>
+                  </div>
                 </div>
               </div>
+
+              <!-- Karta 4 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card4.png" alt="Data Science Fundamentals" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Data Science Fundamentals</h3>
+                  <p class="category-card-text">Explore the world of data analytics and Python-based insights...</p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,8</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="rating-count">(4)</span>
+                  </div>
+                  <div class="category-tags">
+                    <span class="tag tag-green">Novinka</span>
+                    <span class="tag tag-purple">Free trial</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Karta 5 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card1.png" alt="Digital Marketing 101" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Digital Marketing 101</h3>
+                  <p class="category-card-text">Learn to master SEO, PPC, and social media marketing strategies...</p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,7</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="rating-count">(6)</span>
+                  </div>
+                  <div class="category-tags">
+                    <span class="tag tag-blue">Trending</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Karta 6 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card2.png" alt="Leadership Mastery" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Leadership Mastery</h3>
+                  <p class="category-card-text">Enhance your leadership skills with practical techniques and tools...
+                  </p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,9</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="rating-count">(8)</span>
+                  </div>
+                  <div class="category-tags">
+                    <span class="tag tag-turquoise">Top kurz</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Karta 7 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card3.png" alt="Photography for Beginners" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Photography for Beginners</h3>
+                  <p class="category-card-text">Capture the perfect shot using simple techniques and camera control...
+                  </p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,5</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="rating-count">(3)</span>
+                  </div>
+                  <div class="category-tags">
+                    <span class="tag tag-green">Novinka</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Karta 8 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card4.png" alt="Music Production Basics" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Music Production Basics</h3>
+                  <p class="category-card-text">Start producing your own music with professional tools and workflows...
+                  </p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,8</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="rating-count">(4)</span>
+                  </div>
+                  <div class="category-tags">
+                    <span class="tag tag-purple">Free trial</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Karta 9 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card1.png" alt="Creative Writing Workshop" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Creative Writing Workshop</h3>
+                  <p class="category-card-text">Develop storytelling skills and learn to engage readers emotionally...
+                  </p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,7</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="rating-count">(7)</span>
+                  </div>
+                  <div class="category-tags">
+                    <span class="tag tag-blue">Oblíbený</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Karta 10 -->
+              <div class="swiper-slide category-card">
+                <img src="img/card2.png" alt="Healthy Lifestyle Habits" class="category-img" />
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Healthy Lifestyle Habits</h3>
+                  <p class="category-card-text">Learn nutrition, exercise and mental health balance for a better life...
+                  </p>
+                  <div class="category-card-rating">
+                    <span class="rating-value">4,9</span>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="rating-count">(10)</span>
+                  </div>
+                  <div class="category-tags">
+                    <span class="tag tag-turquoise">Top hodnocení</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Tlačítko -->
-        <div class="category-button-wrapper">
-          <button class="category-btn-outline">Další kurzy</button>
-        </div>
 
+      <!-- Tlačítko -->
+      <div class="category-button-wrapper">
+        <button class="category-btn-outline">Další kurzy</button>
       </div>
     </div>
-  </div>
-</section>
+    </div>
+
+    </div>
+  </section>
+
 
   <script src="js/hamburger.js"></script>
   <script src="js/bubbles.js"></script>
   <script src="js/swipers.js"></script>
+  <script src="js/category.js"></script>
+  <script src="js/categorySwiper.js"></script>
 </body>
 
 </html>
